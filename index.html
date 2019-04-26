@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+  <head>
+    <meta charset='utf-8'>
+    <title>个人简历信息填写</title>
+    <link rel='stylesheet' href='styles/style.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  </head>
+  <body>
+    <a href='http://www.jiangnan.edu.cn'>
+      <img src='images/jnu-logo.png' alt='江南大学logo'>
+    </a>
+    <h1>个人简历信息填写</h1>
+    <p>请仔细填写如下信息，并保证信息的真实可信。</p>
+    <ul>
+      <li>姓名</li>
+      <li>性别</li>
+      <li>电子邮箱</li>
+      <li>出生日期</li>
+      <li>备注</li>
+    </ul>
+    <hr>
+    <form action='/my-handling-form-page' method='POST'>
+      <fieldset>
+        <legend>基本信息</legend>
+        <div>
+          <label for='name'>姓名：</label>
+          <input type='text' id='name' name='user_name' placeholder='请在此输入姓名'>
+        </div>
+        <div>
+          性别：
+          <input type='radio' id='gender_male' name='user_gender' value='男' checked>
+          <label for='gender_male'>男</label>
+          <input type='radio' id='gender_female' name='user_gender' value='女'>
+          <label for='gender_female'>女</label>
+        </div>
+        <div>
+          <label for='email'>电子邮箱</label>
+          <input type='email' id='mail' name='user_mail'>
+        </div>
+        <div>
+          出生日期：
+        </div>
+        <div>
+          <label for='notes'>备注：</label>
+          <br>
+          <textarea name='notes' id='notes' cols='30' rows='10'>请填写其他备注信息。</textarea>
+        </div>
+      </fieldset>
+      <!-- <div class='button'>
+        <button type='submit'>提交信息</button>
+      </div> -->
+    </form>
+    <button>Change user</button>
+    <script src='scripts/main.js'></script>
+  </body>
+</html>
