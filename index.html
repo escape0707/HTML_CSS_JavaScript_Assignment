@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8'>
-  <title>个人简历信息填写</title>
+  <title>个人简历生成</title>
   <!-- <link rel='stylesheet' href='styles/style.css'> -->
 </head>
 
@@ -11,23 +11,30 @@
   <a href='http://www.jiangnan.edu.cn'>
     <img src='images/jnu-logo.png' alt='江南大学logo'>
   </a>
-  <h1>个人简历信息填写</h1>
+  <h1>个人简历生成工具</h1>
   <p>请仔细填写如下信息，并保证信息的真实可信。</p>
+  <p>提交表单之后，将会根据所填写信息生成您的电子简历以供打印。</p>
   <hr>
   <form action='/my-handling-form-page' method='POST'>
-    <fieldset>
-      <legend>基本信息</legend>
+    <section>
+      <h2>基本信息</h2>
+
       <div>
         <label for='name'>姓名：</label>
         <input type='text' id='name' name='user_name' placeholder='请在此输入姓名'>
       </div>
-      
-      <div>
-        <label for='gender'>性别：</label>
+
+      <fieldset>
+        <legend>性别：</legend>
         <input type='radio' id='gender_male' name='user_gender' value='男' checked>
         <label for='gender_male'>男</label>
         <input type='radio' id='gender_female' name='user_gender' value='女'>
         <label for='gender_female'>女</label>
+      </fieldset>
+
+      <div>
+        <label for='avatar'>上传头像：</label>
+        <input type='file' name='user_avatar' id='avatar' accept='images/*'>
       </div>
 
       <div>
@@ -36,19 +43,25 @@
       </div>
 
       <div>
-        出生日期：
+        <label for='birthday'>出生日期：</label>
+        <input type='date' name='user_birthday' id='birthday'>
       </div>
+
+      div>
+
       <div>
         <label for='notes'>备注：</label>
         <br>
-        <textarea name='notes' id='notes' cols='30' rows='10'>请填写其他备注信息。</textarea>
+        <textarea name='notes' id='notes'>请填写其他备注信息。</textarea>
       </div>
-    </fieldset>
-    <!-- <div class='button'>
-        <button type='submit'>提交信息</button>
-      </div> -->
+    </section>
+    <section>
+      <p>
+        <!-- <button type='submit'>提交信息</button> -->
+        <button type='button' onclick=''>提交信息</button> <!-- TODO
+ -->      </p>
+    </section>
   </form>
-  <button>Change user</button>
   <!-- <script src='scripts/main.js'></script> -->
 </body>
 
