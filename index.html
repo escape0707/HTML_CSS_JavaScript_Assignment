@@ -11,7 +11,7 @@
   <a href='http://www.jiangnan.edu.cn'>
     <img src='images/jnu-logo.png' alt='江南大学logo'>
   </a>
-  <h1>个人简历生成工具</h1>
+  <h1>个人简历生成助手</h1>
   <p>请仔细填写如下信息，并保证信息的真实可信。</p>
   <p>提交表单之后，将会根据所填写信息生成您的电子简历以供打印。</p>
   <hr>
@@ -38,12 +38,12 @@
       </div>
 
       <div>
-        <label for='email'>电子邮箱</label>
+        <label for='email'>电子邮箱：</label>
         <input type='email' name='cv_mail' id='mail' placeholder='username@example.com'>
       </div>
 
       <div>
-        <label for='telephone'>联系电话</label>
+        <label for='telephone'>联系电话：</label>
         <input type='tel' name='cv_telephone' id='telephone'>
       </div>
 
@@ -51,20 +51,49 @@
         <label for='birthday'>出生日期：</label>
         <input type='date' name='cv_birthday' id='birthday'>
       </div>
+    </section>
+
+    <section>
+      <h2>学习以及实习经历</h2>
 
       <div>
-        <label for='notes'>备注：</label>
+        <label for='degree'>学历程度</label>
+        <select name='cv_degree' id='degree'>
+          <option value='硕士及以上'>硕士及以上</option>
+          <option value='本科/专科'>本科/专科</option>
+          <option value='高中'>高中</option>
+          <option value='中专'>中专</option>
+          <option value='初中'>初中</option>
+          <option value='小学及以下'>小学及以下</option>
+        </select>
+      </div>
+
+      <div>
+        <label for='experience'>工作履历：</label>
+        <button type='button'>++</button>
+        <button type='button'>--</button>
         <br>
-        <textarea name='notes' id='cv_notes'>请填写其他备注信息。</textarea>
+        <textarea name='cv_experience' id='experience'>请填写工作履历，如需填写更多，请点击“++”，“--”按钮调整。</textarea>
+      </div>
+
+      <div>
+        <label for='expectation'>自我陈述：（不少于20字）</label>
+        <br>
+        <textarea name='cv_expectation' id='expectation'>请填写对于所申请岗位的理解，以及对未来的展望。</textarea>
+      </div>
+
+      <div>
+        <label for='hobby'>兴趣特长：</label>
+        <br>
+        <textarea name='cv_hobby' id='hobby'>请填写您的特长，以及获奖项目等。</textarea>
       </div>
     </section>
+
     <section>
-      <p>
-        <!-- <button type='submit'>提交信息</button> -->
-        <button type='button' onclick=''>提交信息</button>
-        <!-- TODO
- -->
-      </p>
+      <input type='checkbox' name='cv_confirm' id='confirm' on>
+      <label for='confirm'>我已确认以上信息真实有效</label>
+      <!-- <button type='submit'>提交信息</button> -->
+      <button type='button' onclick=''>提交信息</button>
     </section>
   </form>
   <!-- <script src='scripts/main.js'></script> -->
