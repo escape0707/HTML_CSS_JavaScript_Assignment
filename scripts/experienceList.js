@@ -20,13 +20,12 @@ button_removeEntry.onclick = function () {
 }
 
 function appendEntry() {
-  let br = document.createElement('br');
   let entry = document.createElement('textarea');
   entry.name = 'cv_experience' + entryCount.toString();
   entry.id = 'experience' + entryCount.toString();
   entry.placeholder = '请填写学习与工作履历，如需增删条目，请点击“++”，“--”按钮。';
 
-  experienceList.appendChild(br);
+  experienceList.appendChild(document.createElement('br'));
   experienceList.appendChild(entry);
 
   entryCount++;
@@ -36,9 +35,8 @@ function removeEntry() {
   if (entryCount > 1) {
     let id = 'experience' + (--entryCount).toString();
     let entry = document.getElementById(id);
-    let br = experienceList.getElementsByTagName('br')[entryCount];
 
+    experienceList.removeChild(entry.previousElementSibling);
     experienceList.removeChild(entry);
-    experienceList.removeChild(br);
   }
 }
