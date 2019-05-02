@@ -8,6 +8,8 @@ let entryCount = 0; // Counting from 0.
 while (entryCount < initEntryCount) {
   appendEntry();
 }
+// 必须填写至少一条经历
+document.getElementById('experience0').required = true;
 
 button_addEntry.onclick = function () {
   appendEntry();

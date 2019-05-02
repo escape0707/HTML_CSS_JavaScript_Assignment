@@ -15,13 +15,13 @@
   <p>请仔细填写如下信息，并保证信息的真实可信。</p>
   <p>提交表单之后，将会根据所填写信息生成您的电子简历以供打印。</p>
   <hr>
-  <form action='/my-handling-form-page' method='POST'>
+  <form>
     <section>
       <h2>个人基本信息</h2>
 
       <div>
         <label for='name'>姓名：</label>
-        <input type='text' name='cv_name' id='name' placeholder='请在此输入姓名'>
+        <input type='text' name='cv_name' id='name' placeholder='请在此输入姓名' required>
       </div>
 
       <div>
@@ -39,17 +39,17 @@
 
       <div>
         <label for='email'>电子邮箱：</label>
-        <input type='email' name='cv_mail' id='mail' placeholder='somebody@example.com'>
+        <input type='email' name='cv_mail' id='mail' placeholder='somebody@example.com' required>
       </div>
 
       <div>
         <label for='telephone'>联系电话：</label>
-        <input type='tel' name='cv_telephone' id='telephone'>
+        <input type='tel' name='cv_telephone' id='telephone' required>
       </div>
 
       <div>
         <label for='birthday'>出生日期：</label>
-        <input type='date' name='cv_birthday' id='birthday'>
+        <input type='date' name='cv_birthday' id='birthday' required>
       </div>
     </section>
 
@@ -77,7 +77,7 @@
       <div>
         <label for='expectation'>自我陈述：（不少于20字）</label>
         <br>
-        <textarea name='cv_expectation' id='expectation' placeholder='请填写对于所申请岗位的理解，以及对未来的展望。'></textarea>
+        <textarea name='cv_expectation' id='expectation' placeholder='请填写对于所申请岗位的理解，以及对未来的展望。' minlength='20' required></textarea>
       </div>
 
       <div>
@@ -90,7 +90,7 @@
     <section>
       <input type='checkbox' name='cv_confirm' id='confirm'>
       <label for='confirm'>我已确认以上信息真实有效</label>
-      <button type='button' id='button_confirm' disabled>提交信息</button>
+      <button type='submit' id='button_confirm' disabled>提交信息</button>
     </section>
   </form>
   <script src='scripts/experienceList.js'></script>
