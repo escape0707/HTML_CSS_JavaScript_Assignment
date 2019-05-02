@@ -1,13 +1,13 @@
-let cvForm = document.forms.cv_form;
+const cvForm = document.forms.cv_form;
 cvForm.addEventListener('submit', handleSubmit);
 document.getElementById('button_debug').addEventListener('click', handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
   
-  let outputWindow = window.open();
-  let outputDocument = outputWindow.document;
-  let cvData = new FormData(cvForm);
+  const outputWindow = window.open();
+  const outputDocument = outputWindow.document;
+  const cvData = new FormData(cvForm);
   
 outputDocument.writeln("<!DOCTYPE html>");
 outputDocument.writeln("<html lang='zh-Hans'>");
