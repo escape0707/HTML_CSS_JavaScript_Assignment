@@ -39,7 +39,7 @@
 
       <div>
         <label for='email'>电子邮箱：</label>
-        <input type='email' name='cv_mail' id='mail' placeholder='username@example.com'>
+        <input type='email' name='cv_mail' id='mail' placeholder='somebody@example.com'>
       </div>
 
       <div>
@@ -68,12 +68,10 @@
         </select>
       </div>
 
-      <div>
+      <div id='experienceList'>
         <label for='experience'>学习与工作履历：</label>
-        <button type='button'>++</button>
-        <button type='button'>--</button>
-        <br>
-        <textarea name='cv_experience' id='experience' placeholder='请填写学习与工作履历，如需填写更多，请点击“++”，“--”按钮。'></textarea>
+        <button type='button' id='button_addEntry'>++</button>
+        <button type='button' id='button_removeEntry'>--</button>
       </div>
 
       <div>
@@ -90,13 +88,13 @@
     </section>
 
     <section>
-      <input type='checkbox' name='cv_confirm' id='confirm' on>
+      <input type='checkbox' name='cv_confirm' id='confirm'>
       <label for='confirm'>我已确认以上信息真实有效</label>
-      <!-- <button type='submit'>提交信息</button> -->
-      <button type='button' onclick=''>提交信息</button>
+      <button type='button' id='button_confirm' disabled>提交信息</button>
     </section>
   </form>
-  <!-- <script src='scripts/main.js'></script> -->
+  <script src='scripts/experienceList.js'></script>
+  <script src='scripts/confirm.js'></script>
 </body>
 
 </html>
