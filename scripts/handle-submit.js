@@ -1,6 +1,5 @@
 const cvForm = document.forms.cv_form;
 cvForm.addEventListener('submit', handleSubmit);
-document.getElementById('button_debug').addEventListener('click', handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
