@@ -15,7 +15,7 @@
   <p>请仔细填写如下信息，并保证信息的真实可信。</p>
   <p>提交表单之后，将会根据所填写信息生成您的电子简历以供打印。</p>
   <hr>
-  <form>
+  <form name='cv_form'>
     <section>
       <h2>个人基本信息</h2>
 
@@ -91,10 +91,12 @@
       <input type='checkbox' name='cv_confirm' id='confirm'>
       <label for='confirm'>我已确认以上信息真实有效</label>
       <button type='submit' id='button_confirm' disabled>提交信息</button>
+      <button type='button' id='button_debug'>Debug</button>
     </section>
   </form>
   <script src='scripts/experienceList.js'></script>
   <script src='scripts/confirm.js'></script>
+  <script src='scripts/handle-submit.js'></script>
 </body>
 
 </html>
