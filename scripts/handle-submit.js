@@ -67,19 +67,11 @@ function handleSubmit(event) {
     <div>
       <label for='degree'>学历程度</label>
       <select name='cv_degree' id='degree'>
-        <option value='硕士及以上'>硕士及以上</option>
-        <option value='本科/专科'>本科/专科</option>
-        <option value='高中'>高中</option>
-        <option value='中专'>中专</option>
-        <option value='初中'>初中</option>
-        <option value='小学及以下'>小学及以下</option>
       </select>
     </div>
 
     <div id='experienceList'>
       <label for='experience'>学习与工作履历：</label>
-      <button type='button' id='button_addEntry'>++</button>
-      <button type='button' id='button_removeEntry'>--</button>
     </div>
 
     <div>
@@ -93,13 +85,6 @@ function handleSubmit(event) {
       <br>
       <textarea name='cv_hobby' id='hobby' placeholder='请填写您的特长，以及获奖项目等。'></textarea>
     </div>
-  </section>
-
-  <section>
-    <input type='checkbox' name='cv_confirm' id='confirm'>
-    <label for='confirm'>我已确认以上信息真实有效</label>
-    <button type='submit' id='button_confirm' disabled>提交信息</button>
-    <button type='button' id='button_debug'>Debug</button>
   </section>
 </body>
 
