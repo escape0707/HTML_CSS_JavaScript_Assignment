@@ -7,7 +7,8 @@ function handleSubmit(event) {
   
   let outputWindow = window.open();
   let outputDocument = outputWindow.document;
-
+  let cvData = new FormData(cvForm);
+  
 <!DOCTYPE html>
 <html lang='zh-Hans'>
 
@@ -90,5 +91,4 @@ function handleSubmit(event) {
 
 </html>
 
-  let cvData = new FormData(cvform);
 }
