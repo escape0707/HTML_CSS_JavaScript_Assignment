@@ -68,7 +68,11 @@ outputDocument.writeln("    </div>");
 outputDocument.writeln();
 outputDocument.writeln("    <div id='experienceList'>");
 outputDocument.writeln("      学习与工作履历：");
-outputDocument.writeln(cvData.getAll('cv_experience' id='experience'>");
+  const experiences = cvData.getAll('cv_experience');
+  for (const experience of experiences) {
+outputDocument.writeln("      <br>");
+outputDocument.writeln(experience);
+  }
 outputDocument.writeln("    </div>");
 outputDocument.writeln();
 outputDocument.writeln("    <div>");
