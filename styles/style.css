@@ -47,6 +47,10 @@ input {
   padding: 2px 5px;
 }
 
+#avatar {
+  width: 15em;
+}
+
 input:focus {
   border: 1px solid #888888;
 }
@@ -81,6 +85,26 @@ footer {
   margin: 0;
   height: 200px;
 }
+
+#avatar_div {
+  border: 1px solid gray; 
+  border-radius: 4px; 
+  width: 151px; 
+  height: 208px; 
+  float: right; 
+  background-color: #eeeeee;
+}
+
+#avatar_div td {
+  vertical-align: middle; 
+  text-align: center;
+}
+
+#avatar_preview {
+  max-width: 143px; 
+  max-height: 200px;
+}
+
 /* 
  
 label {

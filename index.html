@@ -29,6 +29,13 @@
         <div>
           <label for='name'>姓名：</label>
           <input type='text' name='cv_name' id='name' placeholder='请在此输入姓名' required>
+          <table id='avatar_div'>
+            <tr>
+              <td>
+                <img id='avatar_preview'>
+              </td>
+            </tr>
+          </table>
         </div>
 
         <div>
@@ -41,14 +48,7 @@
 
         <div>
           <label for='avatar'>上传头像：</label>
-          <input type='file' name='cv_avatar' id='avatar' accept='images/*' onchange='loadFile(event)''>
-          <img id='avatar_preview' alt='您的头像' height='200px' weigth='200px'>
-          <script>
-            let loadFile = function(event) {
-              let output = document.getElementById('avatar_preview');
-              output.src = URL.createObjectURL(event.target.files[0]);
-            }
-          </script>
+          <input type='file' name='cv_avatar' id='avatar' accept='images/*'>
         </div>
 
         <div>
@@ -115,6 +115,7 @@
   <script src='scripts/experienceList.js'></script>
   <script src='scripts/confirm.js'></script>
   <script src='scripts/handle-submit.js'></script>
+  <script src='scripts/preview-avatar.js'></script>
 </body>
 
 </html>
