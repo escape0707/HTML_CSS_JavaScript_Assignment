@@ -23,7 +23,7 @@ function appendEntry() {
   const entry = document.createElement('textarea');
   entry.name = 'cv_experience';
   entry.id = 'experience' + entryCount.toString();
-  entry.placeholder = '请填写学习与工作履历，如需增删条目，请点击“++”，“--”按钮。';
+  entry.placeholder = '请填写学习与工作履历。';
 
   experienceList.appendChild(document.createElement('br'));
   experienceList.appendChild(entry);
