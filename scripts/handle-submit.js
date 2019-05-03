@@ -14,7 +14,7 @@ function handleSubmit(event) {
   outputDocument.writeln("<head>");
   outputDocument.writeln("  <meta charset='utf-8'>");
   outputDocument.writeln("  <title>个人简历</title>");
-  outputDocument.writeln("  <link rel='stylesheet' href='styles/style.css'>");
+  outputDocument.writeln("  <link rel='stylesheet' href='styles/output_style.css'>");
   outputDocument.writeln("</head>");
   outputDocument.writeln();
   outputDocument.writeln("<body>");
